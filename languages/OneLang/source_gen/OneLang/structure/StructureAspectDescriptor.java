@@ -16,6 +16,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEligibility = createDescriptorForEligibility();
   /*package*/ final ConceptDescriptor myConceptHealthBenefit = createDescriptorForHealthBenefit();
   /*package*/ final ConceptDescriptor myConceptHealthCharge = createDescriptorForHealthCharge();
+  /*package*/ final ConceptDescriptor myConceptIChargeable = createDescriptorForIChargeable();
   /*package*/ final ConceptDescriptor myConceptPlan = createDescriptorForPlan();
   /*package*/ final ConceptDescriptor myConceptPolicyWording = createDescriptorForPolicyWording();
   /*package*/ final ConceptDescriptor myConceptProduct = createDescriptorForProduct();
@@ -27,7 +28,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptCustomer, myConceptEligibility, myConceptHealthBenefit, myConceptHealthCharge, myConceptPlan, myConceptPolicyWording, myConceptProduct);
+    return Arrays.asList(myConceptCustomer, myConceptEligibility, myConceptHealthBenefit, myConceptHealthCharge, myConceptIChargeable, myConceptPlan, myConceptPolicyWording, myConceptProduct);
   }
 
   @Override
@@ -42,6 +43,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptHealthBenefit;
       case LanguageConceptSwitch.HealthCharge:
         return myConceptHealthCharge;
+      case LanguageConceptSwitch.IChargeable:
+        return myConceptIChargeable;
       case LanguageConceptSwitch.Plan:
         return myConceptPlan;
       case LanguageConceptSwitch.PolicyWording:
@@ -85,17 +88,24 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:9a05a2c1-0c2b-4d6c-9ee7-a74b3628979b(OneLang.structure)/8937954300249799326");
     b.prop("hospital_coverage", 0x7c09fe14ad107ac0L, "8937954300249799360");
-    b.aggregate("charges", 0x7c09fe14ad107aa5L).target(0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7c09fe14ad107a8eL).optional(true).ordered(true).multiple(true).origin("8937954300249799333").done();
+    b.aggregate("charges", 0x7c09fe14ad107aa5L).target(0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7aa20b94a761b26aL).optional(true).ordered(true).multiple(true).origin("8937954300249799333").done();
     b.alias("health benefit");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForHealthCharge() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("OneLang", "HealthCharge", 0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7c09fe14ad107a8eL);
     b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7aa20b94a761b26aL);
     b.origin("r:9a05a2c1-0c2b-4d6c-9ee7-a74b3628979b(OneLang.structure)/8937954300249799310");
     b.prop("treatment", 0x7c09fe14ad107a92L, "8937954300249799314");
     b.alias("charge");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIChargeable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("OneLang", "IChargeable", 0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7aa20b94a761b26aL);
+    b.interface_();
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:9a05a2c1-0c2b-4d6c-9ee7-a74b3628979b(OneLang.structure)/8836638151945597546");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPlan() {
@@ -105,6 +115,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:9a05a2c1-0c2b-4d6c-9ee7-a74b3628979b(OneLang.structure)/8937954300249799146");
     b.prop("yearly_maximum_limit", 0x7c09fe14ad107a6cL, "8937954300249799276");
     b.prop("area_of_cover", 0x7c09fe14ad107a7eL, "8937954300249799294");
+    b.aggregate("benefits", 0x7aa20b94a7619c6cL).target(0xc4bcb11ff1394de7L, 0x844230891be7cfe2L, 0x7c09fe14ad107a9eL).optional(false).ordered(true).multiple(true).origin("8836638151945591916").done();
     b.alias("plan");
     return b.create();
   }

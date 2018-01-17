@@ -13,9 +13,10 @@ public final class LanguageConceptSwitch {
   public static final int Eligibility = 1;
   public static final int HealthBenefit = 2;
   public static final int HealthCharge = 3;
-  public static final int Plan = 4;
-  public static final int PolicyWording = 5;
-  public static final int Product = 6;
+  public static final int IChargeable = 4;
+  public static final int Plan = 5;
+  public static final int PolicyWording = 6;
+  public static final int Product = 7;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xc4bcb11ff1394de7L, 0x844230891be7cfe2L);
@@ -23,6 +24,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7c09fe14ad107c6eL, Eligibility);
     builder.put(0x7c09fe14ad107a9eL, HealthBenefit);
     builder.put(0x7c09fe14ad107a8eL, HealthCharge);
+    builder.put(0x7aa20b94a761b26aL, IChargeable);
     builder.put(0x7c09fe14ad1079eaL, Plan);
     builder.put(0x7c09fe14ad107c72L, PolicyWording);
     builder.put(0x7c09fe14ad1079d1L, Product);

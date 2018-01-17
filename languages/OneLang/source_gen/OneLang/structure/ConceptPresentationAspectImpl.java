@@ -13,6 +13,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Eligibility;
   private ConceptPresentation props_HealthBenefit;
   private ConceptPresentation props_HealthCharge;
+  private ConceptPresentation props_IChargeable;
   private ConceptPresentation props_Plan;
   private ConceptPresentation props_PolicyWording;
   private ConceptPresentation props_Product;
@@ -53,6 +54,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_HealthCharge = cpb.create();
         }
         return props_HealthCharge;
+      case LanguageConceptSwitch.IChargeable:
+        if (props_IChargeable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IChargeable = cpb.create();
+        }
+        return props_IChargeable;
       case LanguageConceptSwitch.Plan:
         if (props_Plan == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

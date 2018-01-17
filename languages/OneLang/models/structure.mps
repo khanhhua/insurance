@@ -34,6 +34,9 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
+      </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -108,6 +111,13 @@
       <property role="IQ2nx" value="8937954300249799294" />
       <property role="TrG5h" value="area_of_cover" />
       <ref role="AX2Wp" node="7K9ZxiH47DK" resolve="GeoArea" />
+    </node>
+    <node concept="1TJgyj" id="7Ey2TiBopLG" role="1TKVEi">
+      <property role="IQ2ns" value="8836638151945591916" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="benefits" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7K9ZxiH47Eu" resolve="HealthBenefit" />
     </node>
   </node>
   <node concept="1TIwiD" id="7K9ZxiH47BR">
@@ -208,7 +218,7 @@
   </node>
   <node concept="1TIwiD" id="7K9ZxiH47Ee">
     <property role="EcuMT" value="8937954300249799310" />
-    <property role="3GE5qa" value="types" />
+    <property role="3GE5qa" value="objects" />
     <property role="TrG5h" value="HealthCharge" />
     <property role="34LRSv" value="charge" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -217,8 +227,8 @@
       <property role="TrG5h" value="treatment" />
       <ref role="AX2Wp" node="7K9ZxiH47CJ" resolve="Treatment" />
     </node>
-    <node concept="PrWs8" id="7K9ZxiH47Ef" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="PrWs8" id="7Ey2TiBor9H" role="PzmwI">
+      <ref role="PrY4T" node="7Ey2TiBor9E" resolve="IChargeable" />
     </node>
   </node>
   <node concept="1TIwiD" id="7K9ZxiH47Eu">
@@ -233,7 +243,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="charges" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="7K9ZxiH47Ee" resolve="HealthCharge" />
+      <ref role="20lvS9" node="7Ey2TiBor9E" resolve="IChargeable" />
     </node>
     <node concept="PrWs8" id="7K9ZxiH47EJ" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -360,6 +370,14 @@
     <property role="EcuMT" value="8937954300249799794" />
     <property role="TrG5h" value="PolicyWording" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="PlHQZ" id="7Ey2TiBor9E">
+    <property role="EcuMT" value="8836638151945597546" />
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="IChargeable" />
+    <node concept="PrWs8" id="7Ey2TiBor9F" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 

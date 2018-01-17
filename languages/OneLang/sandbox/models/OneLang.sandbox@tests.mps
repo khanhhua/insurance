@@ -20,10 +20,26 @@
       </concept>
     </language>
     <language id="c4bcb11f-f139-4de7-8442-30891be7cfe2" name="OneLang">
+      <concept id="8937954300249799326" name="OneLang.structure.HealthBenefit" flags="ng" index="3h6oia">
+        <property id="8937954300249799360" name="hospital_coverage" index="3h6ojk" />
+        <child id="8937954300249799333" name="charges" index="3h6oiL" />
+      </concept>
+      <concept id="8937954300249799310" name="OneLang.structure.HealthCharge" flags="ng" index="3h6oiq">
+        <property id="8937954300249799314" name="treatment" index="3h6oi6" />
+      </concept>
+      <concept id="8937954300249799121" name="OneLang.structure.Product" flags="ng" index="3h6ov5">
+        <property id="8937954300249799753" name="lob" index="3h6o9t" />
+        <child id="8937954300249799156" name="plans" index="3h6ovw" />
+      </concept>
       <concept id="8937954300249799159" name="OneLang.structure.Customer" flags="ng" index="3h6ovz">
         <property id="8937954300249799164" name="gender" index="3h6ovC" />
         <property id="8937954300249799160" name="dob" index="3h6ovG" />
         <reference id="8937954300249799183" name="spouse" index="3h6ogr" />
+      </concept>
+      <concept id="8937954300249799146" name="OneLang.structure.Plan" flags="ng" index="3h6ovY">
+        <property id="8937954300249799294" name="area_of_cover" index="3h6ohE" />
+        <property id="8937954300249799276" name="yearly_maximum_limit" index="3h6ohS" />
+        <child id="8836638151945591916" name="benefits" index="3tKTvS" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -47,6 +63,46 @@
         <property role="3h6ovC" value="female" />
         <property role="TrG5h" value="Daisy" />
         <ref role="3h6ogr" node="7K9ZxiH4lLV" resolve="Donald" />
+      </node>
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="7Ey2TiBopLu">
+    <property role="TrG5h" value="Product" />
+    <node concept="1qefOq" id="7Ey2TiBor9R" role="1SKRRt">
+      <node concept="3h6oia" id="7Ey2TiBora1" role="1qenE9">
+        <property role="TrG5h" value="Hospital Charges" />
+        <property role="3h6ojk" value="daycare" />
+        <node concept="3h6oiq" id="7Ey2TiBora3" role="3h6oiL">
+          <property role="TrG5h" value="procedure" />
+          <property role="3h6oi6" value="diagnostic procedures" />
+        </node>
+        <node concept="3h6oiq" id="7Ey2TiBora6" role="3h6oiL">
+          <property role="TrG5h" value="procedure" />
+          <property role="3h6oi6" value="operating theatre charges" />
+        </node>
+      </node>
+    </node>
+    <node concept="1qefOq" id="7Ey2TiBopLv" role="1SKRRt">
+      <node concept="3h6ov5" id="7Ey2TiBopLx" role="1qenE9">
+        <property role="TrG5h" value="InternationalExclusive" />
+        <property role="3h6o9t" value="health" />
+        <node concept="3h6ovY" id="7Ey2TiBopLz" role="3h6ovw">
+          <property role="3h6ohE" value="asia" />
+          <property role="3h6ohS" value="10" />
+          <property role="TrG5h" value="Plan A" />
+          <node concept="3h6oia" id="7Ey2TiBoraz" role="3tKTvS">
+            <property role="TrG5h" value="Hospital Charges" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="3h6oiq" id="7Ey2TiBorb1" role="3h6oiL">
+              <property role="TrG5h" value="procedure" />
+              <property role="3h6oi6" value="diagnostic procedures" />
+            </node>
+            <node concept="3h6oiq" id="7Ey2TiBorb3" role="3h6oiL">
+              <property role="TrG5h" value="procedure" />
+              <property role="3h6oi6" value="operating theatre charges" />
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>
