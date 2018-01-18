@@ -1,1 +1,14 @@
 .mps
+*.java
+*.class
+languages/OneLang/generator/classes_gen/
+languages/OneLang/generator/source_gen.caches/
+languages/OneLang/generator/source_gen/
+languages/OneLang/sandbox/classes_gen/
+languages/OneLang/sandbox/source_gen.caches/
+languages/OneLang/sandbox/source_gen/
+languages/OneLang/sandbox/test_gen.caches/
+languages/OneLang/sandbox/test_gen/
+languages/OneLang/source_gen.caches/
+languages/OneLang/source_gen/**/*
+languages/OneLang/classes_gen/**/*

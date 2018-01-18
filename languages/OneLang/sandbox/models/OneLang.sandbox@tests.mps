@@ -20,6 +20,10 @@
       </concept>
     </language>
     <language id="c4bcb11f-f139-4de7-8442-30891be7cfe2" name="OneLang">
+      <concept id="8937954300249799794" name="OneLang.structure.PolicyWording" flags="ng" index="3h6o9A">
+        <child id="2512504729258363065" name="condition" index="1DcjO4" />
+        <child id="2512504729258379933" name="actions" index="1DcnWw" />
+      </concept>
       <concept id="8937954300249799326" name="OneLang.structure.HealthBenefit" flags="ng" index="3h6oia">
         <property id="8937954300249799360" name="hospital_coverage" index="3h6ojk" />
         <child id="8937954300249799333" name="charges" index="3h6oiL" />
@@ -41,6 +45,18 @@
         <property id="8937954300249799276" name="yearly_maximum_limit" index="3h6ohS" />
         <child id="8836638151945591916" name="benefits" index="3tKTvS" />
       </concept>
+      <concept id="2512504729258322765" name="OneLang.structure.IDeductible" flags="ng" index="1Dc5VK">
+        <property id="2512504729258322766" name="deductible" index="1Dc5VN" />
+        <property id="2512504729258348691" name="deduction_period" index="1DcekI" />
+      </concept>
+      <concept id="2512504729258322755" name="OneLang.structure.AccomodationCharge" flags="ng" index="1Dc5VY">
+        <property id="2512504729258322758" name="room_grade" index="1Dc5VV" />
+      </concept>
+      <concept id="2512504729258363190" name="OneLang.structure.Expression" flags="ng" index="1DcjMb">
+        <property id="2512504729258371519" name="precedence" index="1DchK2" />
+      </concept>
+      <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr" />
+      <concept id="2512504729258397253" name="OneLang.structure.AlwaysConstantExpression" flags="ng" index="1DcrJS" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -68,20 +84,6 @@
   </node>
   <node concept="1lH9Xt" id="7Ey2TiBopLu">
     <property role="TrG5h" value="Product" />
-    <node concept="1qefOq" id="7Ey2TiBor9R" role="1SKRRt">
-      <node concept="3h6oia" id="7Ey2TiBora1" role="1qenE9">
-        <property role="TrG5h" value="Hospital Charges" />
-        <property role="3h6ojk" value="daycare" />
-        <node concept="3h6oiq" id="7Ey2TiBora3" role="3h6oiL">
-          <property role="TrG5h" value="procedure" />
-          <property role="3h6oi6" value="diagnostic procedures" />
-        </node>
-        <node concept="3h6oiq" id="7Ey2TiBora6" role="3h6oiL">
-          <property role="TrG5h" value="procedure" />
-          <property role="3h6oi6" value="operating theatre charges" />
-        </node>
-      </node>
-    </node>
     <node concept="1qefOq" id="7Ey2TiBopLv" role="1SKRRt">
       <node concept="3h6ov5" id="7Ey2TiBopLx" role="1qenE9">
         <property role="TrG5h" value="InternationalExclusive" />
@@ -90,19 +92,74 @@
           <property role="3h6ohE" value="asia" />
           <property role="3h6ohS" value="10" />
           <property role="TrG5h" value="Plan A" />
+          <node concept="3h6oia" id="2budrPbVDNs" role="3tKTvS">
+            <property role="TrG5h" value="Daily Accomodation Charges" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="1Dc5VY" id="2budrPbVDNz" role="3h6oiL">
+              <property role="1Dc5VV" value="standard single" />
+              <property role="1Dc5VN" value="true" />
+              <property role="1DcekI" value="annually" />
+            </node>
+          </node>
           <node concept="3h6oia" id="7Ey2TiBoraz" role="3tKTvS">
             <property role="TrG5h" value="Hospital Charges" />
             <property role="3h6ojk" value="daycare" />
-            <node concept="3h6oiq" id="7Ey2TiBorb1" role="3h6oiL">
-              <property role="TrG5h" value="procedure" />
+            <node concept="3h6oiq" id="2budrPbVAGe" role="3h6oiL">
               <property role="3h6oi6" value="diagnostic procedures" />
             </node>
-            <node concept="3h6oiq" id="7Ey2TiBorb3" role="3h6oiL">
-              <property role="TrG5h" value="procedure" />
+            <node concept="3h6oiq" id="2budrPbVAGS" role="3h6oiL">
               <property role="3h6oi6" value="operating theatre charges" />
             </node>
           </node>
+          <node concept="3h6oia" id="2budrPbVDNA" role="3tKTvS">
+            <property role="TrG5h" value="Organ Transplant" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="3h6oiq" id="2budrPbVDNH" role="3h6oiL">
+              <property role="3h6oi6" value="organ transplant" />
+            </node>
+          </node>
+          <node concept="3h6oia" id="2budrPbVDNJ" role="3tKTvS">
+            <property role="TrG5h" value="Living Organ Donor" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="3h6oiq" id="2budrPbVDNU" role="3h6oiL">
+              <property role="3h6oi6" value="living organ donor" />
+            </node>
+          </node>
+          <node concept="3h6oia" id="2budrPbVFpr" role="3tKTvS">
+            <property role="TrG5h" value="Reconstructive surgery" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="3h6oiq" id="2budrPbVFpA" role="3h6oiL">
+              <property role="3h6oi6" value="reconstructive surgery" />
+            </node>
+          </node>
+          <node concept="3h6oia" id="2budrPbVH1L" role="3tKTvS">
+            <property role="TrG5h" value="Surgical Implants" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="3h6oiq" id="2budrPbVH20" role="3h6oiL">
+              <property role="3h6oi6" value="surgical implant" />
+            </node>
+          </node>
+          <node concept="3h6oia" id="2budrPbVH22" role="3tKTvS">
+            <property role="TrG5h" value="Companion Accomodation" />
+            <property role="3h6ojk" value="daycare" />
+            <node concept="1Dc5VY" id="2budrPbVH2h" role="3h6oiL">
+              <property role="1Dc5VV" value="standard single" />
+              <property role="1Dc5VN" value="true" />
+              <property role="1DcekI" value="annually" />
+            </node>
+          </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="2budrPbVOEB">
+    <property role="TrG5h" value="PolicyWording" />
+    <node concept="1qefOq" id="2budrPbVOEC" role="1SKRRt">
+      <node concept="3h6o9A" id="2budrPbVVrC" role="1qenE9">
+        <node concept="1DcrJS" id="2budrPbVVrF" role="1DcjO4">
+          <property role="1DchK2" value="0" />
+        </node>
+        <node concept="1DcnWr" id="2budrPbVVrI" role="1DcnWw" />
       </node>
     </node>
   </node>
