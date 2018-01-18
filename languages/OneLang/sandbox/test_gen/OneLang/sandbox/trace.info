@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <root nodeRef="r:aba6e011-1768-45c6-9411-42c26556df46(OneLang.sandbox@tests)/2512504729258379943">
+    <file name="PolicyWording_Test.java">
+      <unit id="2512504729258379943" at="12,0,17,0" name="OneLang.sandbox.PolicyWording_Test$TestBody" />
+      <unit id="2512504729258379943" at="9,0,18,0" name="OneLang.sandbox.PolicyWording_Test" />
+    </file>
+  </root>
+  <root nodeRef="r:aba6e011-1768-45c6-9411-42c26556df46(OneLang.sandbox@tests)/8836638151945591902">
+    <file name="Product_Test.java">
+      <unit id="8836638151945591902" at="12,0,17,0" name="OneLang.sandbox.Product_Test$TestBody" />
+      <unit id="8836638151945591902" at="9,0,18,0" name="OneLang.sandbox.Product_Test" />
+    </file>
+  </root>
+  <root nodeRef="r:aba6e011-1768-45c6-9411-42c26556df46(OneLang.sandbox@tests)/8937954300249857143">
+    <file name="Customer_Test.java">
+      <unit id="8937954300249857143" at="12,0,17,0" name="OneLang.sandbox.Customer_Test$TestBody" />
+      <unit id="8937954300249857143" at="9,0,18,0" name="OneLang.sandbox.Customer_Test" />
+    </file>
+  </root>
+</debug-info>
+
