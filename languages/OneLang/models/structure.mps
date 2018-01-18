@@ -20,6 +20,7 @@
         <property id="1212087449254" name="noValueText" index="Q2FuW" />
         <property id="1197591154882" name="memberIdentifierPolicy" index="3lZH7k" />
         <reference id="1083171729157" name="memberDataType" index="M4eZT" />
+        <reference id="1083241965437" name="defaultMember" index="Qgau1" />
         <child id="1083172003582" name="member" index="M5hS2" />
       </concept>
       <concept id="1082978499127" name="jetbrains.mps.lang.structure.structure.ConstrainedDataTypeDeclaration" flags="ng" index="Az7Fb">
@@ -158,9 +159,10 @@
   </node>
   <node concept="AxPO7" id="7K9ZxiH47C1">
     <property role="TrG5h" value="Gender" />
-    <property role="3lZH7k" value="derive_from_internal_value" />
+    <property role="3lZH7k" value="derive_from_presentation" />
     <property role="3GE5qa" value="types" />
     <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <ref role="Qgau1" node="7K9ZxiH47C8" />
     <node concept="M4N5e" id="7K9ZxiH47C2" role="M5hS2">
       <property role="1uS6qv" value="male" />
       <property role="1uS6qo" value="Male" />
@@ -566,6 +568,7 @@
     <property role="EcuMT" value="2512504729258379942" />
     <property role="3GE5qa" value="lang.statements" />
     <property role="TrG5h" value="ActionStatement" />
+    <property role="34LRSv" value="action" />
     <ref role="1TJDcQ" node="2budrPbVOEy" resolve="BaseStatement" />
   </node>
   <node concept="1TIwiD" id="2budrPbVST5">

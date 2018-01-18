@@ -50,9 +50,6 @@
       <concept id="2512504729258322755" name="OneLang.structure.AccomodationCharge" flags="ng" index="1Dc5VY">
         <property id="2512504729258322758" name="room_grade" index="1Dc5VV" />
       </concept>
-      <concept id="2512504729258363190" name="OneLang.structure.BaseExpression" flags="ng" index="1DcjMb">
-        <property id="2512504729258371519" name="precedence" index="1DchK2" />
-      </concept>
       <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr" />
       <concept id="2512504729258397253" name="OneLang.structure.AlwaysLiteral" flags="ng" index="1DcrJS" />
     </language>
@@ -85,10 +82,12 @@
     <property role="3h6oam" value="01-18-2018" />
     <ref role="3h6o9D" node="2budrPbW6E9" resolve="InternationalExclusive" />
     <node concept="3h6o9A" id="2budrPbW6En" role="3h6o9B">
-      <node concept="1DcrJS" id="2budrPbW6Eq" role="1DcjO4">
-        <property role="1DchK2" value="0" />
-      </node>
       <node concept="1DcnWr" id="2budrPbYAIx" role="1DcnWw" />
+      <node concept="1DcrJS" id="740cL9iYzyS" role="1DcjO4" />
+    </node>
+    <node concept="3h6o9A" id="740cL9iXX6f" role="3h6o9B">
+      <node concept="1DcnWr" id="740cL9iXX6h" role="1DcnWw" />
+      <node concept="1DcrJS" id="740cL9iY_tp" role="1DcjO4" />
     </node>
   </node>
   <node concept="1DbzjB" id="2budrPbYDma">
@@ -100,6 +99,7 @@
     <node concept="3h6ovz" id="2budrPbYDmc" role="1DaLEb">
       <property role="TrG5h" value="Tom" />
       <property role="3h6ovG" value="01-01-1987" />
+      <property role="3h6ovC" value="male" />
       <ref role="3h6ogr" node="2budrPbYDn3" resolve="Phoenix" />
     </node>
     <node concept="3h6ovz" id="2budrPbYDn3" role="1DaLEb">

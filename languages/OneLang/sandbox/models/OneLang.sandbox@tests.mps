@@ -52,11 +52,11 @@
       <concept id="2512504729258322755" name="OneLang.structure.AccomodationCharge" flags="ng" index="1Dc5VY">
         <property id="2512504729258322758" name="room_grade" index="1Dc5VV" />
       </concept>
-      <concept id="2512504729258363190" name="OneLang.structure.Expression" flags="ng" index="1DcjMb">
+      <concept id="2512504729258363190" name="OneLang.structure.BaseExpression" flags="ng" index="1DcjMb">
         <property id="2512504729258371519" name="precedence" index="1DchK2" />
       </concept>
       <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr" />
-      <concept id="2512504729258397253" name="OneLang.structure.AlwaysConstantExpression" flags="ng" index="1DcrJS" />
+      <concept id="2512504729258397253" name="OneLang.structure.AlwaysLiteral" flags="ng" index="1DcrJS" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -71,6 +71,7 @@
         <property role="3h6ovG" value="11-12-1987" />
         <property role="3h6ovC" value="male" />
         <property role="TrG5h" value="Donald" />
+        <ref role="3h6ogr" node="7K9ZxiH4mM3" resolve="Daisy" />
       </node>
     </node>
     <node concept="1qefOq" id="7K9ZxiH4mLW" role="1SKRRt">
