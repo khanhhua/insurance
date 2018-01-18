@@ -317,5 +317,18 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="6lryv6NmYzw">
+    <property role="3GE5qa" value="lang.statements" />
+    <ref role="1XX52x" to="43nh:2budrPbVOEA" resolve="ActionStatement" />
+    <node concept="3EZMnI" id="6lryv6NmYA4" role="2wV5jI">
+      <node concept="3F0ifn" id="6lryv6NmYAe" role="3EZMnx">
+        <property role="3F0ifm" value="do" />
+      </node>
+      <node concept="3F0A7n" id="6lryv6NmYAn" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:6lryv6NmYzl" resolve="action" />
+      </node>
+      <node concept="l2Vlx" id="6lryv6NmYA7" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
