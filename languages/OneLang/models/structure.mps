@@ -366,7 +366,7 @@
     <node concept="1TJgyj" id="7K9ZxiH47LN" role="1TKVEi">
       <property role="IQ2ns" value="8937954300249799795" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="policy_wording" />
+      <property role="20kJfa" value="policy_wordings" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="7K9ZxiH47LM" resolve="PolicyWording" />
     </node>
@@ -376,6 +376,12 @@
       <property role="20kJfa" value="product" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7K9ZxiH47Bh" resolve="Product" />
+    </node>
+    <node concept="1TJgyj" id="1rVEBxbLyFM" role="1TKVEi">
+      <property role="IQ2ns" value="1656104721632865010" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="outcome" />
+      <ref role="20lvS9" node="1rVEBxbLyFT" resolve="ProposalOutcome" />
     </node>
     <node concept="1TJgyi" id="7K9ZxiH47M2" role="1TKVEl">
       <property role="IQ2nx" value="8937954300249799810" />
@@ -569,6 +575,7 @@
     <property role="3GE5qa" value="lang.statements" />
     <property role="TrG5h" value="ActionStatement" />
     <property role="34LRSv" value="action" />
+    <property role="R4oN_" value="Perform a predefined action" />
     <ref role="1TJDcQ" node="2budrPbVOEy" resolve="BaseStatement" />
     <node concept="PrWs8" id="6lryv6NmYzi" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -577,6 +584,12 @@
       <property role="IQ2nx" value="7303582891900659925" />
       <property role="TrG5h" value="action" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="1rVEBxbLngl" role="1TKVEi">
+      <property role="IQ2ns" value="1656104721632818197" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="eligibility" />
+      <ref role="20lvS9" node="7K9ZxiH47LI" resolve="Eligibility" />
     </node>
   </node>
   <node concept="1TIwiD" id="2budrPbVST5">
@@ -637,6 +650,36 @@
       <property role="20kJfa" value="eligibility" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7K9ZxiH47LI" resolve="Eligibility" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1rVEBxbLyFT">
+    <property role="EcuMT" value="1656104721632865017" />
+    <property role="3GE5qa" value="processes" />
+    <property role="TrG5h" value="ProposalOutcome" />
+    <property role="34LRSv" value="outcome" />
+    <property role="R4oN_" value="The general outcome of an eligibility run" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="1rVEBxbLEjm" role="1TKVEl">
+      <property role="IQ2nx" value="1656104721632896214" />
+      <property role="TrG5h" value="status" />
+      <ref role="AX2Wp" node="1rVEBxbLEjp" resolve="ProposalOutcomeState" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="1rVEBxbLEjp">
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="ProposalOutcomeState" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="1rVEBxbLEjQ" role="M5hS2">
+      <property role="1uS6qv" value="undetermined" />
+      <property role="1uS6qo" value="Undetermined" />
+    </node>
+    <node concept="M4N5e" id="1rVEBxbLEjq" role="M5hS2">
+      <property role="1uS6qv" value="accepted" />
+      <property role="1uS6qo" value="Accepted" />
+    </node>
+    <node concept="M4N5e" id="1rVEBxbLEk6" role="M5hS2">
+      <property role="1uS6qv" value="rejected" />
+      <property role="1uS6qo" value="Rejected" />
     </node>
   </node>
 </model>

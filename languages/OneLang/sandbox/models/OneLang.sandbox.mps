@@ -52,6 +52,7 @@
       </concept>
       <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr">
         <property id="7303582891900659925" name="action" index="3m064$" />
+        <reference id="1656104721632818197" name="eligibility" index="1tfHTH" />
       </concept>
       <concept id="2512504729258397253" name="OneLang.structure.AlwaysLiteral" flags="ng" index="1DcrJS" />
     </language>
@@ -85,14 +86,16 @@
     <ref role="3h6o9D" node="2budrPbW6E9" resolve="InternationalExclusive" />
     <node concept="3h6o9A" id="2budrPbW6En" role="3h6o9B">
       <node concept="1DcrJS" id="740cL9iYzyS" role="1DcjO4" />
-      <node concept="1DcnWr" id="6lryv6Nn4Fa" role="1DcnWw">
+      <node concept="1DcnWr" id="1rVEBxbMyNg" role="1DcnWw">
         <property role="3m064$" value="accept" />
+        <ref role="1tfHTH" node="2budrPbW6Em" resolve="EligibilityV1" />
       </node>
     </node>
     <node concept="3h6o9A" id="740cL9iXX6f" role="3h6o9B">
       <node concept="1DcrJS" id="740cL9iY_tp" role="1DcjO4" />
-      <node concept="1DcnWr" id="6lryv6Nn4Fg" role="1DcnWw">
-        <property role="3m064$" value="reject" />
+      <node concept="1DcnWr" id="1rVEBxbMyRH" role="1DcnWw">
+        <property role="3m064$" value="accept" />
+        <ref role="1tfHTH" node="2budrPbW6Em" resolve="EligibilityV1" />
       </node>
     </node>
   </node>

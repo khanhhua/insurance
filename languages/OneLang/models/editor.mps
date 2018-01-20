@@ -91,7 +91,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="740cL9iXR_s" role="3EZMnx">
-        <ref role="1NtTu8" to="43nh:7K9ZxiH47LN" resolve="policy_wording" />
+        <ref role="1NtTu8" to="43nh:7K9ZxiH47LN" resolve="policy_wordings" />
         <node concept="l2Vlx" id="740cL9iXR_x" role="2czzBx" />
         <node concept="pVoyu" id="740cL9iXVzz" role="3F10Kt">
           <property role="VOm3f" value="true" />

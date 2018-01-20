@@ -55,7 +55,9 @@
       <concept id="2512504729258363190" name="OneLang.structure.BaseExpression" flags="ng" index="1DcjMb">
         <property id="2512504729258371519" name="precedence" index="1DchK2" />
       </concept>
-      <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr" />
+      <concept id="2512504729258379942" name="OneLang.structure.ActionStatement" flags="ng" index="1DcnWr">
+        <property id="7303582891900659925" name="action" index="3m064$" />
+      </concept>
       <concept id="2512504729258397253" name="OneLang.structure.AlwaysLiteral" flags="ng" index="1DcrJS" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -156,11 +158,13 @@
   <node concept="1lH9Xt" id="2budrPbVOEB">
     <property role="TrG5h" value="PolicyWording" />
     <node concept="1qefOq" id="2budrPbVOEC" role="1SKRRt">
-      <node concept="3h6o9A" id="2budrPbVVrC" role="1qenE9">
-        <node concept="1DcrJS" id="2budrPbVVrF" role="1DcjO4">
+      <node concept="3h6o9A" id="1rVEBxbL37j" role="1qenE9">
+        <node concept="1DcrJS" id="1rVEBxbL37m" role="1DcjO4">
           <property role="1DchK2" value="0" />
         </node>
-        <node concept="1DcnWr" id="2budrPbVVrI" role="1DcnWw" />
+        <node concept="1DcnWr" id="1rVEBxbL3BQ" role="1DcnWw">
+          <property role="3m064$" value="accept" />
+        </node>
       </node>
     </node>
   </node>
