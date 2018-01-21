@@ -35,6 +35,9 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
+      </concept>
       <concept id="5497648299878491908" name="jetbrains.mps.baseLanguage.structure.BaseVariableReference" flags="nn" index="1M0zk4">
         <reference id="5497648299878491909" name="baseVariableDeclaration" index="1M0zk5" />
       </concept>
@@ -128,6 +131,30 @@
             <node concept="JncvC" id="1rVEBxbM4ol" role="JncvA">
               <property role="TrG5h" value="eligibility" />
               <node concept="2jxLKc" id="1rVEBxbM4om" role="1tU5fm" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="2uA71iRiS8p">
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="factory_ByDefaultLiteral" />
+    <node concept="37WvkG" id="2uA71iRiS8q" role="37WGs$">
+      <ref role="37XkoT" to="43nh:2budrPbVST5" resolve="ByDefaultLiteral" />
+      <node concept="37Y9Zx" id="2uA71iRiS8r" role="37ZfLb">
+        <node concept="3clFbS" id="2uA71iRiS8s" role="2VODD2">
+          <node concept="3clFbF" id="2uA71iRiS8C" role="3cqZAp">
+            <node concept="37vLTI" id="2uA71iRiT7v" role="3clFbG">
+              <node concept="3clFbT" id="2uA71iRiT7T" role="37vLTx">
+                <property role="3clFbU" value="true" />
+              </node>
+              <node concept="2OqwBi" id="2uA71iRiShG" role="37vLTJ">
+                <node concept="1r4Lsj" id="2uA71iRiS8B" role="2Oq$k0" />
+                <node concept="3TrcHB" id="2uA71iRjqcV" role="2OqNvi">
+                  <ref role="3TsBF5" to="43nh:2uA71iRiTEY" resolve="value" />
+                </node>
+              </node>
             </node>
           </node>
         </node>

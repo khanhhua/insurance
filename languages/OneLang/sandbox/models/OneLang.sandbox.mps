@@ -8,6 +8,18 @@
   <imports />
   <registry>
     <language id="c4bcb11f-f139-4de7-8442-30891be7cfe2" name="OneLang">
+      <concept id="2857001888913267389" name="OneLang.structure.BooleanExpression" flags="ng" index="2gVoqD">
+        <property id="2857001888913267390" name="value" index="2gVoqE" />
+      </concept>
+      <concept id="2857001888913724999" name="OneLang.structure.Comparison" flags="ng" index="2gX8Dj">
+        <property id="2857001888913725000" name="operator" index="2gX8Ds" />
+        <child id="2857001888913725004" name="right" index="2gX8Do" />
+        <child id="2857001888913725002" name="left" index="2gX8Du" />
+      </concept>
+      <concept id="2857001888914389052" name="OneLang.structure.Age" flags="ng" index="2gYEgC">
+        <property id="2857001888914389053" name="value" index="2gYEgD" />
+      </concept>
+      <concept id="2857001888914440937" name="OneLang.structure.CurrentCustomerReferenceLiteral" flags="ng" index="2gYTVX" />
       <concept id="8937954300249799794" name="OneLang.structure.PolicyWording" flags="ng" index="3h6o9A">
         <child id="2512504729258363065" name="condition" index="1DcjO4" />
         <child id="2512504729258379933" name="actions" index="1DcnWw" />
@@ -15,7 +27,7 @@
       <concept id="8937954300249799790" name="OneLang.structure.Eligibility" flags="ng" index="3h6o9U">
         <property id="8937954300249799810" name="release_date" index="3h6oam" />
         <reference id="8937954300249799805" name="product" index="3h6o9D" />
-        <child id="8937954300249799795" name="policy_wording" index="3h6o9B" />
+        <child id="8937954300249799795" name="policy_wordings" index="3h6o9B" />
       </concept>
       <concept id="8937954300249799326" name="OneLang.structure.HealthBenefit" flags="ng" index="3h6oia">
         <property id="8937954300249799360" name="hospital_coverage" index="3h6ojk" />
@@ -54,7 +66,7 @@
         <property id="7303582891900659925" name="action" index="3m064$" />
         <reference id="1656104721632818197" name="eligibility" index="1tfHTH" />
       </concept>
-      <concept id="2512504729258397253" name="OneLang.structure.AlwaysLiteral" flags="ng" index="1DcrJS" />
+      <concept id="2512504729258397253" name="OneLang.structure.ByDefaultLiteral" flags="ng" index="1DcrJS" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -92,10 +104,17 @@
       </node>
     </node>
     <node concept="3h6o9A" id="740cL9iXX6f" role="3h6o9B">
-      <node concept="1DcrJS" id="740cL9iY_tp" role="1DcjO4" />
       <node concept="1DcnWr" id="1rVEBxbMyRH" role="1DcnWw">
-        <property role="3m064$" value="accept" />
+        <property role="3m064$" value="reject" />
         <ref role="1tfHTH" node="2budrPbW6Em" resolve="EligibilityV1" />
+      </node>
+      <node concept="2gX8Dj" id="2uA71iRt41x" role="1DcjO4">
+        <property role="2gVoqE" value="false" />
+        <property role="2gX8Ds" value="age-must-be-at-least" />
+        <node concept="2gYTVX" id="2uA71iRt41E" role="2gX8Du" />
+        <node concept="2gYEgC" id="2uA71iRt422" role="2gX8Do">
+          <property role="2gYEgD" value="15" />
+        </node>
       </node>
     </node>
   </node>
