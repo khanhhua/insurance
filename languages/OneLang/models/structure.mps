@@ -402,7 +402,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="condition" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="2budrPbVK$Q" resolve="BaseExpression" />
+      <ref role="20lvS9" node="2uA71iRiTEX" resolve="BooleanExpression" />
     </node>
     <node concept="1TJgyj" id="2budrPbVOEt" role="1TKVEi">
       <property role="IQ2ns" value="2512504729258379933" />
@@ -522,7 +522,7 @@
     <property role="3GE5qa" value="lang.expressions" />
     <property role="TrG5h" value="Operator" />
     <property role="PDuV0" value="true" />
-    <property role="3lZH7k" value="derive_from_internal_value" />
+    <property role="3lZH7k" value="derive_from_presentation" />
     <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
     <node concept="M4N5e" id="2budrPbVK_5" role="M5hS2">
       <property role="1uS6qv" value="and" />
@@ -534,15 +534,15 @@
     </node>
     <node concept="M4N5e" id="2budrPbVK$X" role="M5hS2">
       <property role="1uS6qv" value="addition" />
-      <property role="1uS6qo" value="+" />
+      <property role="1uS6qo" value="add" />
     </node>
     <node concept="M4N5e" id="2budrPbVK_2" role="M5hS2">
-      <property role="1uS6qo" value="-" />
+      <property role="1uS6qo" value="subtract" />
       <property role="1uS6qv" value="substraction" />
     </node>
     <node concept="M4N5e" id="2budrPbVMAO" role="M5hS2">
-      <property role="1uS6qv" value="&gt;=" />
       <property role="1uS6qo" value="must be at least" />
+      <property role="1uS6qv" value="age-must-be-at-least" />
     </node>
   </node>
   <node concept="1TIwiD" id="2budrPbVMAH">
@@ -595,9 +595,10 @@
   <node concept="1TIwiD" id="2budrPbVST5">
     <property role="EcuMT" value="2512504729258397253" />
     <property role="3GE5qa" value="lang.expressions" />
-    <property role="TrG5h" value="AlwaysLiteral" />
-    <property role="34LRSv" value="always" />
-    <ref role="1TJDcQ" node="2budrPbVK$Q" resolve="BaseExpression" />
+    <property role="TrG5h" value="ByDefaultLiteral" />
+    <property role="34LRSv" value="by default" />
+    <property role="R4oN_" value="By default" />
+    <ref role="1TJDcQ" node="2uA71iRiTEX" resolve="BooleanExpression" />
   </node>
   <node concept="1TIwiD" id="2budrPbW05q">
     <property role="EcuMT" value="2512504729258426714" />
@@ -680,6 +681,136 @@
     <node concept="M4N5e" id="1rVEBxbLEk6" role="M5hS2">
       <property role="1uS6qv" value="rejected" />
       <property role="1uS6qo" value="Rejected" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2uA71iRiS7u">
+    <property role="EcuMT" value="2857001888913261022" />
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="LogicalOperation" />
+    <property role="R4oN_" value="Apply AND/OR" />
+    <ref role="1TJDcQ" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    <node concept="1TJgyi" id="2uA71iRjctS" role="1TKVEl">
+      <property role="IQ2nx" value="2857001888913344376" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="2budrPbVK$W" resolve="Operator" />
+    </node>
+    <node concept="1TJgyj" id="2uA71iRiTF0" role="1TKVEi">
+      <property role="IQ2ns" value="2857001888913267392" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    </node>
+    <node concept="1TJgyj" id="2uA71iRiTF2" role="1TKVEi">
+      <property role="IQ2ns" value="2857001888913267394" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="right" />
+      <ref role="20lvS9" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    </node>
+    <node concept="t5JxF" id="2uA71iRiTF7" role="lGtFl">
+      <property role="t5JxN" value="AND, OR" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2uA71iRiTEX">
+    <property role="EcuMT" value="2857001888913267389" />
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="BooleanExpression" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="2budrPbVK$Q" resolve="BaseExpression" />
+    <node concept="1TJgyi" id="2uA71iRiTEY" role="1TKVEl">
+      <property role="IQ2nx" value="2857001888913267390" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="t5JxF" id="2uA71iRiTF5" role="lGtFl">
+      <property role="t5JxN" value="Anything that returns a boolean value (ByDefaultExpression, Logical Operation)" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2uA71iRkDp7">
+    <property role="EcuMT" value="2857001888913724999" />
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="Comparison" />
+    <ref role="1TJDcQ" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    <node concept="1TJgyi" id="2uA71iRkDp8" role="1TKVEl">
+      <property role="IQ2nx" value="2857001888913725000" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="2budrPbVK$W" resolve="Operator" />
+    </node>
+    <node concept="1TJgyj" id="2uA71iRkDpa" role="1TKVEi">
+      <property role="IQ2ns" value="2857001888913725002" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    </node>
+    <node concept="1TJgyj" id="2uA71iRkDpc" role="1TKVEi">
+      <property role="IQ2ns" value="2857001888913725004" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2uA71iRnbwW">
+    <property role="EcuMT" value="2857001888914389052" />
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="Age" />
+    <property role="34LRSv" value="age" />
+    <property role="R4oN_" value="Age in time as units of day, week, month, year" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2uA71iRnbwX" role="1TKVEl">
+      <property role="IQ2nx" value="2857001888914389053" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="2uA71iRnbwZ" role="1TKVEl">
+      <property role="IQ2nx" value="2857001888914389055" />
+      <property role="TrG5h" value="unit" />
+      <ref role="AX2Wp" node="2uA71iRnbx2" resolve="Timespan" />
+    </node>
+    <node concept="PrWs8" id="2uA71iRnYus" role="PzmwI">
+      <ref role="PrY4T" to="tpck:hYa1RjM" resolve="IType" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="2uA71iRnbx2">
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="Timespan" />
+    <property role="3lZH7k" value="derive_from_internal_value" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="2uA71iRnbx3" role="M5hS2">
+      <property role="1uS6qv" value="day" />
+      <property role="1uS6qo" value="day" />
+    </node>
+    <node concept="M4N5e" id="2uA71iRnbx4" role="M5hS2">
+      <property role="1uS6qv" value="week" />
+      <property role="1uS6qo" value="week" />
+    </node>
+    <node concept="M4N5e" id="2uA71iRnbxd" role="M5hS2">
+      <property role="1uS6qv" value="month" />
+      <property role="1uS6qo" value="month" />
+    </node>
+    <node concept="M4N5e" id="2uA71iRnbxh" role="M5hS2">
+      <property role="1uS6qo" value="quarter" />
+      <property role="1uS6qv" value="quarter" />
+    </node>
+    <node concept="M4N5e" id="2uA71iRnbxm" role="M5hS2">
+      <property role="1uS6qo" value="year" />
+      <property role="1uS6qv" value="year" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2uA71iRnobD">
+    <property role="EcuMT" value="2857001888914440937" />
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="CurrentCustomerReferenceLiteral" />
+    <property role="34LRSv" value="the customer" />
+    <property role="R4oN_" value="The customer in consideration" />
+    <ref role="1TJDcQ" node="2budrPbVK$Q" resolve="BaseExpression" />
+    <node concept="1TJgyj" id="2uA71iRn$Or" role="1TKVEi">
+      <property role="IQ2ns" value="2857001888914492699" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="customer" />
+      <ref role="20lvS9" node="7K9ZxiH47BR" resolve="Customer" />
     </node>
   </node>
 </model>

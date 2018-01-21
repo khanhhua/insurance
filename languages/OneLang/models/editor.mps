@@ -28,6 +28,9 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1186414999511" name="jetbrains.mps.lang.editor.structure.UnderlinedStyleClassItem" flags="ln" index="VQ3r3">
+        <property id="1214316229833" name="underlined" index="2USNnj" />
+      </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
@@ -160,9 +163,9 @@
   </node>
   <node concept="24kQdi" id="740cL9iY$OZ">
     <property role="3GE5qa" value="lang.expressions" />
-    <ref role="1XX52x" to="43nh:2budrPbVST5" resolve="AlwaysLiteral" />
+    <ref role="1XX52x" to="43nh:2budrPbVST5" resolve="ByDefaultLiteral" />
     <node concept="3F0ifn" id="740cL9iY_c3" role="2wV5jI">
-      <property role="3F0ifm" value="always" />
+      <property role="3F0ifm" value="by default" />
     </node>
   </node>
   <node concept="24kQdi" id="6lryv6NmsMG">
@@ -328,6 +331,67 @@
         <ref role="1NtTu8" to="43nh:6lryv6NmYzl" resolve="action" />
       </node>
       <node concept="l2Vlx" id="6lryv6NmYA7" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2uA71iRjQ1h">
+    <property role="3GE5qa" value="lang.expressions" />
+    <ref role="1XX52x" to="43nh:2uA71iRiS7u" resolve="LogicalOperation" />
+    <node concept="3EZMnI" id="2uA71iRjQ1n" role="2wV5jI">
+      <node concept="3F1sOY" id="2uA71iRjQ1x" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRiTF0" resolve="left" />
+      </node>
+      <node concept="3F0A7n" id="2uA71iRjQ1B" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRjctS" resolve="operator" />
+        <node concept="VQ3r3" id="2uA71iRk21F" role="3F10Kt">
+          <property role="2USNnj" value="2" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="2uA71iRjQ1J" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRiTF2" resolve="right" />
+      </node>
+      <node concept="l2Vlx" id="2uA71iRjQ1q" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2uA71iRkDq9">
+    <property role="3GE5qa" value="lang.expressions" />
+    <ref role="1XX52x" to="43nh:2uA71iRkDp7" resolve="Comparison" />
+    <node concept="3EZMnI" id="2uA71iRkDqb" role="2wV5jI">
+      <node concept="3F1sOY" id="2uA71iRkDqi" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRkDpa" resolve="left" />
+      </node>
+      <node concept="3F0A7n" id="2uA71iRkDqo" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRkDp8" resolve="operator" />
+        <node concept="VQ3r3" id="2uA71iRkDq_" role="3F10Kt">
+          <property role="2USNnj" value="2" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="2uA71iRkDqw" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRkDpc" resolve="right" />
+      </node>
+      <node concept="l2Vlx" id="2uA71iRkDqe" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2uA71iRn$O_">
+    <property role="3GE5qa" value="lang.expressions" />
+    <ref role="1XX52x" to="43nh:2uA71iRnobD" resolve="CurrentCustomerReferenceLiteral" />
+    <node concept="3F0ifn" id="2uA71iRn$OB" role="2wV5jI">
+      <property role="3F0ifm" value="the customer" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2uA71iRnL$O">
+    <property role="3GE5qa" value="types" />
+    <ref role="1XX52x" to="43nh:2uA71iRnbwW" resolve="Age" />
+    <node concept="3EZMnI" id="2uA71iRqqsn" role="2wV5jI">
+      <node concept="3F0A7n" id="2uA71iRqqsu" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRnbwX" resolve="value" />
+      </node>
+      <node concept="3F0A7n" id="2uA71iRs6sG" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:2uA71iRnbwZ" resolve="unit" />
+      </node>
+      <node concept="3F0ifn" id="2uA71iRs6sO" role="3EZMnx">
+        <property role="3F0ifm" value="old" />
+      </node>
+      <node concept="l2Vlx" id="2uA71iRqqsq" role="2iSdaV" />
     </node>
   </node>
 </model>
