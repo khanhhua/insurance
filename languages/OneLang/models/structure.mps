@@ -544,6 +544,10 @@
       <property role="1uS6qo" value="must be at least" />
       <property role="1uS6qv" value="age-must-be-at-least" />
     </node>
+    <node concept="M4N5e" id="3MvOfwuHF2X" role="M5hS2">
+      <property role="1uS6qv" value="age-must-not-be-more" />
+      <property role="1uS6qo" value="must not be more than" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2budrPbVMAH">
     <property role="EcuMT" value="2512504729258371501" />
