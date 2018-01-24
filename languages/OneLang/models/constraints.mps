@@ -171,5 +171,9 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="3MvOfwuIVEi">
+    <property role="3GE5qa" value="lang.expressions" />
+    <ref role="1M2myG" to="43nh:3MvOfwuIVEf" resolve="AssertionListExpression" />
+  </node>
 </model>
 

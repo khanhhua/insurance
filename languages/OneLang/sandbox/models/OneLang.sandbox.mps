@@ -11,6 +11,11 @@
       <concept id="2857001888913267389" name="OneLang.structure.BooleanExpression" flags="ng" index="2gVoqD">
         <property id="2857001888913267390" name="value" index="2gVoqE" />
       </concept>
+      <concept id="2857001888913261022" name="OneLang.structure.LogicalOperation" flags="ng" index="2gVpRa">
+        <property id="2857001888913344376" name="operator" index="2gUHHG" />
+        <child id="2857001888913267392" name="left" index="2gVork" />
+        <child id="2857001888913267394" name="right" index="2gVorm" />
+      </concept>
       <concept id="2857001888913724999" name="OneLang.structure.Comparison" flags="ng" index="2gX8Dj">
         <property id="2857001888913725000" name="operator" index="2gX8Ds" />
         <child id="2857001888913725004" name="right" index="2gX8Do" />
@@ -18,8 +23,14 @@
       </concept>
       <concept id="2857001888914389052" name="OneLang.structure.Age" flags="ng" index="2gYEgC">
         <property id="2857001888914389053" name="value" index="2gYEgD" />
+        <property id="2857001888914389055" name="unit" index="2gYEgF" />
       </concept>
       <concept id="2857001888914440937" name="OneLang.structure.CurrentCustomerReferenceLiteral" flags="ng" index="2gYTVX" />
+      <concept id="4368439927658756751" name="OneLang.structure.AssertionListExpression" flags="ng" index="y96DR">
+        <property id="4368439927658803670" name="operator" index="y8U4I" />
+        <child id="4368439927658815352" name="subject" index="y8OY0" />
+        <child id="4368439927658756752" name="assertions" index="y96DC" />
+      </concept>
       <concept id="8937954300249799794" name="OneLang.structure.PolicyWording" flags="ng" index="3h6o9A">
         <child id="2512504729258363065" name="condition" index="1DcjO4" />
         <child id="2512504729258379933" name="actions" index="1DcnWw" />
@@ -66,7 +77,6 @@
         <property id="7303582891900659925" name="action" index="3m064$" />
         <reference id="1656104721632818197" name="eligibility" index="1tfHTH" />
       </concept>
-      <concept id="2512504729258397253" name="OneLang.structure.ByDefaultLiteral" flags="ng" index="1DcrJS" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -97,10 +107,31 @@
     <property role="3h6oam" value="01-18-2018" />
     <ref role="3h6o9D" node="2budrPbW6E9" resolve="InternationalExclusive" />
     <node concept="3h6o9A" id="2budrPbW6En" role="3h6o9B">
-      <node concept="1DcrJS" id="740cL9iYzyS" role="1DcjO4" />
       <node concept="1DcnWr" id="1rVEBxbMyNg" role="1DcnWw">
         <property role="3m064$" value="accept" />
         <ref role="1tfHTH" node="2budrPbW6Em" resolve="EligibilityV1" />
+      </node>
+      <node concept="y96DR" id="5ikjFwbN0cn" role="1DcjO4">
+        <property role="2gVoqE" value="false" />
+        <property role="y8U4I" value="must-be" />
+        <node concept="2gYTVX" id="5ikjFwbN0d2" role="y8OY0" />
+        <node concept="2gX8Dj" id="5ikjFwbUlTP" role="y96DC">
+          <property role="2gVoqE" value="false" />
+          <property role="2gX8Ds" value="at-least" />
+          <node concept="2gYTVX" id="5ikjFwbUlTV" role="2gX8Du" />
+          <node concept="2gYEgC" id="5ikjFwbUlTX" role="2gX8Do">
+            <property role="2gYEgD" value="15" />
+          </node>
+        </node>
+        <node concept="2gX8Dj" id="5ikjFwbU_8n" role="y96DC">
+          <property role="2gVoqE" value="false" />
+          <property role="2gX8Ds" value="not-more-than" />
+          <node concept="2gYTVX" id="5ikjFwbU_8z" role="2gX8Du" />
+          <node concept="2gYEgC" id="5ikjFwbU_8N" role="2gX8Do">
+            <property role="2gYEgD" value="80" />
+            <property role="2gYEgF" value="year" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="3h6o9A" id="740cL9iXX6f" role="3h6o9B">
@@ -108,12 +139,25 @@
         <property role="3m064$" value="reject" />
         <ref role="1tfHTH" node="2budrPbW6Em" resolve="EligibilityV1" />
       </node>
-      <node concept="2gX8Dj" id="2uA71iRt41x" role="1DcjO4">
+      <node concept="2gVpRa" id="3MvOfwuIqC3" role="1DcjO4">
         <property role="2gVoqE" value="false" />
-        <property role="2gX8Ds" value="age-must-be-at-least" />
-        <node concept="2gYTVX" id="2uA71iRt41E" role="2gX8Du" />
-        <node concept="2gYEgC" id="2uA71iRt422" role="2gX8Do">
-          <property role="2gYEgD" value="15" />
+        <property role="2gUHHG" value="and" />
+        <node concept="2gX8Dj" id="3MvOfwuIqC9" role="2gVork">
+          <property role="2gVoqE" value="false" />
+          <property role="2gX8Ds" value="at-least" />
+          <node concept="2gYTVX" id="3MvOfwuIqCQ" role="2gX8Du" />
+          <node concept="2gYEgC" id="3MvOfwuIqDp" role="2gX8Do">
+            <property role="2gYEgD" value="15" />
+          </node>
+        </node>
+        <node concept="2gX8Dj" id="3MvOfwuIqCi" role="2gVorm">
+          <property role="2gVoqE" value="false" />
+          <property role="2gX8Ds" value="not-more-than" />
+          <node concept="2gYTVX" id="3MvOfwuIqDr" role="2gX8Du" />
+          <node concept="2gYEgC" id="3MvOfwuIqDt" role="2gX8Do">
+            <property role="2gYEgD" value="80" />
+            <property role="2gYEgF" value="year" />
+          </node>
         </node>
       </node>
     </node>

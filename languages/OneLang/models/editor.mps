@@ -15,6 +15,7 @@
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
+      <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1106270637846" name="jetbrains.mps.lang.editor.structure.CellLayout_Flow" flags="nn" index="2iR$Sn" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
@@ -392,6 +393,23 @@
         <property role="3F0ifm" value="old" />
       </node>
       <node concept="l2Vlx" id="2uA71iRqqsq" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3MvOfwuIVIP">
+    <property role="3GE5qa" value="lang.expressions" />
+    <ref role="1XX52x" to="43nh:3MvOfwuIVEf" resolve="AssertionListExpression" />
+    <node concept="3EZMnI" id="3MvOfwuJ9XZ" role="2wV5jI">
+      <node concept="3F1sOY" id="3MvOfwuJ9Yl" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:3MvOfwuJ9XS" resolve="subject" />
+      </node>
+      <node concept="3F0A7n" id="3MvOfwuJ9Yp" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:3MvOfwuJ77m" resolve="operator" />
+      </node>
+      <node concept="3F2HdR" id="5ikjFwbNt8A" role="3EZMnx">
+        <ref role="1NtTu8" to="43nh:3MvOfwuIVEg" resolve="assertions" />
+        <node concept="2iRfu4" id="5ikjFwbNt8B" role="2czzBx" />
+      </node>
+      <node concept="l2Vlx" id="3MvOfwuJ9Y2" role="2iSdaV" />
     </node>
   </node>
 </model>
