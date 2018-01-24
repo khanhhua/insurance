@@ -540,13 +540,17 @@
       <property role="1uS6qo" value="subtract" />
       <property role="1uS6qv" value="substraction" />
     </node>
+    <node concept="M4N5e" id="3MvOfwuIVE7" role="M5hS2">
+      <property role="1uS6qv" value="must-be" />
+      <property role="1uS6qo" value="must be" />
+    </node>
     <node concept="M4N5e" id="2budrPbVMAO" role="M5hS2">
-      <property role="1uS6qo" value="must be at least" />
-      <property role="1uS6qv" value="age-must-be-at-least" />
+      <property role="1uS6qo" value="at least" />
+      <property role="1uS6qv" value="at-least" />
     </node>
     <node concept="M4N5e" id="3MvOfwuHF2X" role="M5hS2">
-      <property role="1uS6qv" value="age-must-not-be-more" />
-      <property role="1uS6qo" value="must not be more than" />
+      <property role="1uS6qv" value="not-more-than" />
+      <property role="1uS6qo" value="be not more than" />
     </node>
   </node>
   <node concept="1TIwiD" id="2budrPbVMAH">
@@ -815,6 +819,35 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="customer" />
       <ref role="20lvS9" node="7K9ZxiH47BR" resolve="Customer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3MvOfwuIVEf">
+    <property role="EcuMT" value="4368439927658756751" />
+    <property role="3GE5qa" value="lang.expressions" />
+    <property role="TrG5h" value="AssertionListExpression" />
+    <property role="34LRSv" value="assertion list" />
+    <ref role="1TJDcQ" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    <node concept="1TJgyj" id="3MvOfwuJ9XS" role="1TKVEi">
+      <property role="IQ2ns" value="4368439927658815352" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="subject" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    </node>
+    <node concept="1TJgyj" id="3MvOfwuIVEg" role="1TKVEi">
+      <property role="IQ2ns" value="4368439927658756752" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="assertions" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="2uA71iRiTEX" resolve="BooleanExpression" />
+    </node>
+    <node concept="1TJgyi" id="3MvOfwuJ77m" role="1TKVEl">
+      <property role="IQ2nx" value="4368439927658803670" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="2budrPbVK$W" resolve="Operator" />
+    </node>
+    <node concept="t5JxF" id="3MvOfwuJ77q" role="lGtFl">
+      <property role="t5JxN" value="For example, the customer must be ___ and ___ and ___" />
     </node>
   </node>
 </model>
